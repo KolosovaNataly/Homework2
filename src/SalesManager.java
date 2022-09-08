@@ -1,24 +1,24 @@
 import java.util.Arrays;
 
 public class SalesManager {
-    protected int[] sales;
+    protected long[] sales;
 
-    public SalesManager(int[] sales) {
+    public SalesManager(long[] sales) {
         this.sales = sales;
     }
 
-    public int max() {
-        int max = -1;
-        for (int sale : sales) {
+    public long max() {
+        long max = -1;
+        for (long sale : sales) {
             if (sale > max) {
                 max = sale;
             }
         }
         return max;
     }
-    public int trimmedMean() {
-        int[] copy = sales.clone();
-        int sum = 0;
+    public long trimmedMean() {
+        long[] copy = sales.clone();
+        long sum = 0;
         Arrays.sort(copy);
         for (int i = 1; i < copy.length - 1; i++) {
             sum = sum + copy[i];
