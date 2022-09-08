@@ -16,14 +16,4 @@ public class SalesManager {
         }
         return max;
     }
-
-    public long trimmedMean() {
-        long[] copy = sales.clone();
-        long sum = 0;
-        Arrays.sort(copy);
-        for (int i = 1; i < copy.length - 1; i++) {
-            sum = sum + copy[i];
-        }
-        return sum / (copy.length - 2);
-    }
 }
